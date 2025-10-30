@@ -1,0 +1,9 @@
+books_dict = {}
+n = int(input("Enter the number of books to record: "))
+for i in range(n):
+    title = input("Enter book title: ")
+    copies = int(input("Enter number of copies: "))
+books_dict[title] = copies
+print("Library Book Records:")
+print(books_dict)
+
