@@ -1,0 +1,10 @@
+# Program 2: Squares of numbers 0 through 4 using generator
+
+def squares_generator(start=0, end=4):
+    """Generate squares of numbers from start through end."""
+    for i in range(start, end + 1):
+        yield i * i
+
+# Print squares of numbers from 0 to 4
+for sq in squares_generator(0, 4):
+    print(sq)
