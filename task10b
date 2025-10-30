@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt
+bins = [140, 145, 150, 156, 162, 168, 173, 178, 184, 190, 195]
+people = [2, 5, 15, 31, 46, 53, 45, 28, 21, 4]
+plt.hist(bins[:-1], bins=bins, weights=people)
+plt.xlabel('Height (cm)')
+plt.ylabel('Number of People')
+plt.title('Height Histogram')
+plt.show()
+
