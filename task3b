@@ -1,0 +1,17 @@
+# Input number (3 digits only)
+num = int(input("Enter a 3-digit number: "))
+
+# Extract digits
+a = num // 100           # hundreds place
+b = (num // 10) % 10     # tens place
+c = num % 10             # units place
+
+# Calculate Armstrong sum
+armstrong_sum = (a**3) + (b**3) + (c**3)
+
+# Check Armstrong condition
+if armstrong_sum == num:
+print("it is an Armstrong number")
+else:
+print(" it is not an Armstrong number")
+
