@@ -1,0 +1,77 @@
+importpygame 
+import random 
+ 
+# Initialize Pygame package 
+pygame.init() 
+ 
+# Define window size and title 
+WINDOW_WIDTH = 500 
+WINDOW_HEIGHT = 500 
+WINDOW_TITLE = "Snake Game" 
+window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT)) 
+pygame.display.set_caption(WINDOW_TITLE) 
+ 
+# Definecolors 
+BLACK = (0, 0, 0) 
+WHITE = (255, 255, 255) 
+RED = (255, 0, 0) 
+GREEN = (0, 255, 0) 
+ 
+# Define Snake class 
+class Snake: 
+def __init__(self): 
+self.x = WINDOW_WIDTH/2 
+self.y = WINDOW_HEIGHT/2 
+self.color = GREEN 
+self.direction = "right" 
+self.speed = 10 
+self.size = 10 
+self.body = [(self.x, self.y)] 
+ 
+def move(self): 
+ifself.direction == "right": 
+self.x += self.speed 
+elifself.direction == "left": 
+self.x -= self.speed 
+elifself.direction == "down": 
+self.y += self.speed 
+elifself.direction == "up": 
+self.y -= self.speed 
+ 
+self.body.insert(0, (self.x, self.y)) 
+self.body.pop() 
+ 
+def draw(self): 
+for x, y in self.body: 
+pygame.draw.rect(window, self.color, [x, y, self.size, self.size]) 
+ 
+# Define Fruit class 
+class Fruit: 
+def __init__(self): 
+self.x = random.randint(0, WINDOW_WIDTH-self.size) 
+self.y = random.randint(0, WINDOW_HEIGHT-self.size) 
+self.color = RED 
+self.size = 10 
+ 
+def draw(self): 
+pygame.draw.rect(window, self.color, [self.x, self.y, self.size, self.size]) 
+ 
+# Define function to check collision with fruit 
+defcheck_fruit_collision(snake, fruit): 
+ifsnake.x == fruit.x and snake.y == fruit.y: 
+fruit.x = random.randint(0, WINDOW_WIDTH-fruit.size) 
+fruit.y = random.randint(0, WINDOW_HEIGHT-fruit.size) 
+snake.body.append((snake.x, snake.y)) 
+return True 
+return False 
+ 
+# Define function to check collision with window 
+defcheck_window_collision(snake): 
+ifsnake.x< 0 or snake.x> WINDOW_WIDTH-snake.size or snake.y< 0 or snake.y> 
+WINDOW_HEIGHT-snake.size: 
+return True 
+return False 
+ 
+# Initialize Snake and Fruit objects 
+snake = Snake() 
+fruit = Fruit 
