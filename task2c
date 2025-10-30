@@ -1,0 +1,12 @@
+count = 0  # To keep track of number of cars
+print("Enter 'car' each time a car enters. Type 'close' to end the day.")
+while True:
+    entry = input("Enter: ")
+    if entry.lower() == "close":
+        break
+elifentry.lower() == "car":
+        count += 1
+    else:
+print("Invalid input! Type 'car' or 'close'.")
+print("\nTotal number of cars entered today:", count)
+
