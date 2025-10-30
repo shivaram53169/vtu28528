@@ -1,0 +1,27 @@
+f calculate_grade(marks):
+avg = sum(marks) / le# Function to calculate grade
+de n(marks)
+    if avg>= 90:
+        return "A+"
+elifavg>= 75:
+        return "A"
+elifavg>= 60:
+        return "B"
+elifavg>= 40:
+        return "C"
+    else:
+        return "Fail"
+
+name = input("Enter Student Name: ")
+marks = []
+for i in range(5):
+    m = int(input("Enter marks for subject:"))
+marks.append(m)
+
+grade = calculate_grade(marks)
+
+print("Name   :", name)
+print("Marks  :", marks)
+print("Average:", sum(marks) / len(marks))
+print("Grade  :", grade)
+
