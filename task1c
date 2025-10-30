@@ -1,0 +1,5 @@
+radius_feet = float(input("Enter the radius of the field (in feet): "))
+area_sqft = 3.14159 * radius_feet ** 2
+area_acres = area_sqft / 43560
+print("The area of the field is:", area_acres, "acres")
+
