@@ -1,0 +1,18 @@
+balance = 10000  # initial balance
+try:
+print("Your current balance is:", balance)
+    amount = float(input("Enter amount to withdraw: "))
+    if amount <= 0:
+        raise ValueError("Amount must be positive.")
+    if amount > balance:
+        raise ValueError("Insufficient balance to complete the transaction.")
+    balance = balance - amount
+print("Withdrawal successful! Remaining balance:", balance)
+except ValueError:
+print("Error Type: ValueError - Invalid or incorrect withdrawal amount.")
+except Exception:
+print("Error Type: General Exception - Unexpected error occurred.")
+else:
+print("Transaction completed successfully!")
+finally:
+print("Thank you for banking with us!")
