@@ -1,0 +1,20 @@
+my_package/add.py
+def add(a, b):
+    return a + b
+
+my_package/sub.py
+def sub(a, b):
+    return a – b
+
+my_package/__init__.py
+
+
+main.py
+from my_package.add import add
+from my_package.sub import sub
+
+x = 10
+y = 4
+
+print("Sum =", add(x, y))
+print("Difference =", sub(x, y))
