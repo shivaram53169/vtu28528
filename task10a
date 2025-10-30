@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+import numpy as np
+# Generate data for sine wave
+x = np.linspace(0, 2 * np.pi, 1000)
+y = np.sin(x)
+# Plotting the sine wave
+plt.plot(x, y, label='Sine Wave')
+plt.title("Sine Wave Plot")
+plt.xlabel("X axis (radians)")
+plt.ylabel("Y axis (sin(x))")
+plt.grid(True)
+plt.legend()
+plt.show()
+
