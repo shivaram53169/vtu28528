@@ -1,0 +1,28 @@
+candidate1 = 0
+candidate2 = 0
+candidate3 = 0
+print("Enter votes for candidates (1, 2, or 3). Type 'end' to finish voting.")
+while True:
+    vote = input("Enter your vote (1/2/3 or 'end'): ")
+if vote.lower() == 'end':
+        break
+elif vote == '1':
+        candidate1 += 1
+elif vote == '2':
+        candidate2 += 1
+elif vote == '3':
+        candidate3 += 1
+    else:
+print("Invalid vote! Please enter 1, 2, 3, or 'end'.")
+print("\nVote Counts:")
+print("Candidate 1:", candidate1)
+print("Candidate 2:", candidate2)
+print("Candidate 3:", candidate3)
+if candidate1 > candidate2 and candidate1 > candidate3:
+print("Winner: Candidate 1")
+elif candidate2 > candidate1 and candidate2 > candidate3:
+print("Winner: Candidate 2")
+elif candidate3 > candidate1 and candidate3 > candidate2:
+print("Winner: Candidate 3")
+else:
+print("It's a tie!")
