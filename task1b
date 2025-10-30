@@ -1,0 +1,5 @@
+X = int(input("Enter the number of weeks: "))
+Y = int(input("Enter the cost per week (in coins): "))
+total_amount = X * Y
+print("The total amount Chef has to pay is:", total_amount, "coins")
+
