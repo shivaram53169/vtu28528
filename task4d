@@ -1,0 +1,14 @@
+n = int(input("Enter number of books issued: "))
+issued_books = []
+for i in range(n):
+    book = input("Enter book title: ")
+issued_books.append(book)
+print("\nList of issued books:", issued_books)
+search_book = input("Enter the book title to search: ")
+if search_book in issued_books:
+    count = issued_books.count(search_book)
+print("Book is issued.")
+print("Number of times this book is issued:", count)
+else:
+print("Book is not issued.")
+
