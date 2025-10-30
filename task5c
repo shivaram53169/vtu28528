@@ -1,0 +1,12 @@
+def linear_search(book_list, key):
+    for i in range(len(book_list)):
+        if book_list[i] == key:
+            return i
+    return -1         
+books = [101, 205, 150, 320, 450, 600]
+book_id = int(input("Enter Book ID to search: "))
+pos = linear_search(books, book_id)
+if pos != -1:
+print("Book found at position", pos)
+else:
+print("Book not found")
