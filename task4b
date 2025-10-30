@@ -1,0 +1,12 @@
+n = int(input("Enter number of subjects: "))
+marks_list = []
+for i in range(n):
+    mark = int(input(f"Enter marks for subject {i+1}: "))
+marks_list.append(mark)
+marks_tuple = tuple(marks_list)
+print("Marks tuple:", marks_tuple)
+highest = marks_tuple[0]
+for m in marks_tuple:
+    if m > highest:
+        highest = m
+print("Highest marks:", highest)
