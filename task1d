@@ -1,0 +1,7 @@
+x1 = float(input("Enter Ram's X coordinate: "))
+y1 = float(input("Enter Ram's Y coordinate: "))
+x2 = float(input("Enter Sita's X coordinate: "))
+y2 = float(input("Enter Sita's Y coordinate: "))
+distance = ((x2 - x1)**2 + (y2 - y1)**2) ** 0.5
+print("The distance between Ram and Sita is:", distance)
+
