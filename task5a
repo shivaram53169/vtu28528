@@ -1,0 +1,26 @@
+def binary_search(nums, target):
+    low = 0
+    high = len(nums) - 1
+
+    while low <= high:
+        mid = (low + high) // 2  # middle index
+
+        if nums[mid] == target:
+            return mid
+elifnums[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    return -1
+
+
+nums = [-1, 0, 3, 5, 9, 12]
+target = 9
+print("Input:", nums, "Target:", target)
+print("Output:", binary_search(nums, target))  
+
+target = 2
+print("Input:", nums, "Target:", target)
+print("Output:", binary_search(nums, target))  
+
