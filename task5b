@@ -1,0 +1,23 @@
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] >arr[j + 1]:
+arr[j], arr[j + 1] = arr[j + 1], arr[j]  # swap
+    return arr
+
+
+n = int(input("Enter number of integers: "))
+
+arr = []
+for i in range(n):
+    num = int(input(f"Enter integer {i+1}: "))
+arr.append(num)
+
+sorted_arr = bubble_sort(arr)
+
+smallest = sorted_arr[0] - 1
+largest = sorted_arr[-1] + 1
+
+print("Sorted integers:", sorted_arr)
+print("Sequence of integers:", smallest ,largest)
