@@ -1,0 +1,16 @@
+try:
+    item = input("Enter item name: ")
+    quantity = int(input("Enter quantity: "))
+    price = float(input("Enter price per item: "))
+    if quantity < 0 or price < 0:
+        raise ValueError("Quantity and price must be non-negative.")
+    total = quantity * price
+print("Total amount for", item, "is", total, "rupees")
+except ValueError:
+print("Error Type: ValueError - Invalid numeric input or negative value.")
+except Exception:
+print("Error Type: General Exception - Unexpected error occurred.")
+else:
+print("Order processed successfully!")
+finally:
+print("Thank you for shopping with us!")
