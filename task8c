@@ -1,0 +1,14 @@
+def my_decorator(func):
+    def wrapper(length, breadth):
+print("Starting...")
+        result = func(length, breadth)
+        print("Done.")
+        return result
+    return wrapper
+
+@my_decorator
+def area_of_rectangle(length, breadth):
+    return length * breadth
+
+# Test
+print("Area:", area_of_rectangle(5, 10))
