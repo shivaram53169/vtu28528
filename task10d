@@ -1,0 +1,8 @@
+import matplotlib.pyplot as plt
+values = [35, 25, 25, 15]
+labels = ['W', 'X', 'Y', 'Z']
+plt.figure(figsize=(6,6))
+plt.pie(values, labels=la4bels, autopct='%1.1f%%')
+plt.title("Pie Chart for W, X, Y, Z")
+plt.show()
+
